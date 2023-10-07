@@ -1,142 +1,114 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Showcase</title>
+    <title>Osteoarthritis Prediction</title>
     <style>
+        /* Reset some default styles */
+        body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-image: url('https://wallpapercave.com/wp/wp6938553.jpg');
-            background-size: cover; /* This property will cover the entire viewport */
-            background-repeat: no-repeat;
-            background-attachment: fixed; /* Keeps the background image fixed as the content scrolls */
-        }
-      header {
-            background-color: #000000;
- 	   
-            color: #FF0000;
-            text-align: center;
-            padding: 20px;
-        }
-
-        
-
-        h1 {
-            text-align: center;
-        }
-
-        .property {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 10px;
-        }
-
-        .property img {
-            max-width: 400px;
-            max-height: 300px;
-            border: 1px solid #ccc;
-            padding: 20px;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Segoe UI Black;
-            font-color:white;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
         }
 
         header {
-            background-color: #000000;
-            color: #FFFFFF;
+            background-color: #000;
             text-align: center;
-            position: fixed;
-            width: 100%;
-            height:10%;
-            top: 0;
-            left: 0;
-            padding: 10px 0;
+            padding: 20px 0;
         }
 
         h1 {
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Adjust values as needed */
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
         }
 
-        .content {
-            margin-top: 100px; /* Adjust this margin to match your header's height */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
-            /* Your content styles go here */
+            text-align: center;
         }
-    
 
-        /* The rest of your CSS styles here... */
+        .upload-container {
+            text-align: center;
+            margin-top: 20px;
+        }
 
+        input[type="file"] {
+            display: none;
+        }
+
+        label {
+            cursor: pointer;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+
+        label:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        img#output {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            display: none;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: #000;
+        }
     </style>
 </head>
 <body>
     <header>
-        
-          
-        <h1>Welcome to Osteoarthritis prediction website</h1>
-    
-    </header><br>
+        <h1> Osteoarthritis Prediction</h1>
+    </header>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<center>
-<table border="5">
+    <div class="container">
+        <div class="upload-container">
+            <form action="submit" method="post" enctype="multipart/form-data">
+                <label for="file">Upload X-ray Image</label>
+                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)">
+                <img id="output" width="200" alt="Uploaded Image">
+                <button type="submit" id="processButton">Process Image</button><br>
+                <h6>(!) Upload Only Knee Osteoarthritis X-Rays</h6>
+            </form>
+            {% if(answer) %}
+                <h1>The class is {{answer[0]}} with an accuracy of {{answer[1]}}</h1>
+            {% endif %}
+        </div>
+    </div>
 
-<caption>X-ray image of only knee is to be uploaded!
-</caption>
-<thead>
-<tr> <!-- merge two rows -->
-<th rowspan = "2">
-</th>
-<th colspan = "4">
-<strong><p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-<p><label for="file" style="cursor: pointer;">Upload Image</label></p>
-<p><img id="output" width="200" /></p></strong><br>
-
-</th>
-</tr>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>2</th>
-<td>4646</td>
-<td>gjgj</td>
-<td>gjgj</td>
-<td>jgj</td>
-</tr>
-<tr>
-<th></th>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</center>
+    <script>
+        function loadFile(event) {
+            var output = document.getElementById('output');
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
-    
