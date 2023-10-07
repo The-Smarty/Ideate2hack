@@ -6,3 +6,5 @@ Osteoarthritis is a degenerative joint disease, in which the tissues in the join
 
 
 We deploy the deep learning model in the website. The website also contains the chatbot to answer the queries related to the result given by the model.
+
+**Dataset:** https://data.mendeley.com/datasets/56rmx5bjcr/1
