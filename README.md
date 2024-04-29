@@ -1,5 +1,4 @@
 # Ideate2hack
-This Repo  by team Wizards is for Ideate2Hack - A 24 hour hackathon held at VRSEC. 
 
 ## Title
 Knee Osteoarthritis Detection and Classification from X-Rays using Deep Learning
@@ -11,4 +10,5 @@ Knee osteoarthritis is the predominant type of arthritis, affecting joint tissue
  https://data.mendeley.com/datasets/56rmx5bjcr/1
 
 ## Note
+This Repo is created by Team Wizards for Ideate2Hack - A 24 hour hackathon held at VRSEC. 
 We deploy the deep learning model in the website. The website also contains the chatbot to answer the queries related to the result given by the model. (Just a Prototype.)
