@@ -1,10 +1,14 @@
 # Ideate2hack
-This Repo is for Ideate2Hack by team Wizards. 
+This Repo  by team Wizards is for Ideate2Hack - A 24 hour hackathon held at VRSEC. 
 
-**Problem Statement**
-Osteoarthritis is a degenerative joint disease, in which the tissues in the joint break down over time. It is the most common form of arthritis, affecting millions of people worldwide. So early detection of disease is crucial for effective treatment. Sometimes, doctors may not be available to figure out if someone has this knee problem. Current methods relying on manual interpretation often led to delays and inaccuracies. Our proposed solution uses image preprocessing techniques to enhance the quality of X-ray data and employs the powerful Convolutional Neural Network architecture. This approach focuses on extracting crucial features from X-ray images, specifically targeting joint spaces, bone density, and osteophytes. Through rigorous testing and validation against expert radiologist’s assessments, the proposed system ensures both reliability and efficiency in identifying the presence and severity of osteoarthritis. The model generates a text message as a result. The model (chatbot) answers the queries related to the result. This helps to enhance accuracy and efficiency, enabling early intervention and improved patient outcomes. This technology represents a critical advancement in the field of osteoarthritis diagnosis and management.
+## Title
+Knee Osteoarthritis Detection and Classification from X-Rays using Deep Learning
 
+## Discription
+Knee osteoarthritis is the predominant type of arthritis, affecting joint tissues and afflicting millions of individuals globally. At present, there are no medications available to cure knee osteoarthritis. The only method to manage the progression of this disease is through early detection. X-ray imaging is currently a key method for predicting osteoarthritis. However, the manual interpretation of X-rays is susceptible to errors due to the limited expertise of radiologists. In recent studies, automated systems employing machine learning have been explored for their efficiency in predicting osteoarthritis from X-ray images. However, the majority of these methods must enhance their predictive accuracy to effectively detect osteoarthritis in its early stages. X-ray images are usually graded using Kellgren and Lawrence’s (KL) grading scheme according to the order of severity of osteoarthritis from normal to severe. This study aims to detect and classify knee osteoarthritis according to the KL grading system for radiographs. The proposed solution is an ensemble model which combines the strength of the InceptionResNetV2 and Xception neural network architectures. The ensemble model demonstrates high performance, yielding an accuracy score of 95.1%. This work contributes to the growing field of medical image analysis, providing a reliable and effective tool for clinicians in the early diagnosis and treatment planning of KOA.
 
-We deploy the deep learning model in the website. The website also contains the chatbot to answer the queries related to the result given by the model.
+## Dataset
+ https://data.mendeley.com/datasets/56rmx5bjcr/1
 
-**Dataset:** https://data.mendeley.com/datasets/56rmx5bjcr/1
+## Note
+We deploy the deep learning model in the website. The website also contains the chatbot to answer the queries related to the result given by the model. (Just a Prototype.)
